@@ -1,0 +1,84 @@
+body{
+    background-color: rgb(26, 26, 26);
+    color: rgb(210, 210, 210) ;
+}
+.header{
+    /* border: 1px solid white; */
+    height: 40px;
+    margin-bottom: 10px;
+    justify-items: center;
+
+}
+.date-taskadd{
+    margin: 13px;
+    border: 1px solid white;
+    height: 50px;
+    margin-bottom: 10px;
+    justify-items: center;
+}
+.main-container{
+    height: 600px;
+    /* border: 1px solid white; */
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile{
+    border-radius: 13px;
+    background-color: #282828;
+    width: 21%;
+    box-shadow: 
+    0 4px 6px rgba(143, 103, 169, 0.2),
+    0 10px 20px rgba(74, 213, 56, 0.1);
+}
+.data{
+    width: 77%;
+    display: flex;
+    justify-content: space-between;
+}
+.task-work{
+
+    height: 100%;
+    background-color: #282828;
+    border-radius: 13px;
+    box-shadow: 
+    0 4px 6px rgba(143, 103, 169, 0.2),
+    0 10px 20px rgba(74, 213, 56, 0.1);
+}
+.data-graphs-months{
+    justify-content: space-between;
+    width: 68%;
+}
+.task-work{
+    width: 30%;
+}
+
+.graph, .months{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.graphs{
+    display: flex;
+    justify-content: space-between;
+}
+.line-graph, .bar-graph{
+    height: 295px;
+    width: 49%;
+    background-color: #282828;
+    border-radius: 13px;
+    box-shadow: 
+    0 4px 6px rgba(143, 103, 169, 0.2),
+    0 10px 20px rgba(74, 213, 56, 0.1);
+}
+.months{
+    margin-top: 10px;
+    height: 295px;
+    width: 100%;
+    background-color: #282828;
+    border-radius: 13px;
+    box-shadow: 
+    0 4px 6px rgba(143, 103, 169, 0.2),
+    0 10px 20px rgba(74, 213, 56, 0.1);
+}
