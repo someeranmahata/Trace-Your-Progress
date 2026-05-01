@@ -1,84 +1,160 @@
-body{
-    background-color: rgb(26, 26, 26);
-    color: rgb(210, 210, 210) ;
-}
-.header{
-    /* border: 1px solid white; */
-    height: 40px;
-    margin-bottom: 10px;
-    justify-items: center;
-
-}
-.date-taskadd{
-    margin: 13px;
-    border: 1px solid white;
-    height: 50px;
-    margin-bottom: 10px;
-    justify-items: center;
-}
-.main-container{
-    height: 600px;
-    /* border: 1px solid white; */
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
+body {
+    background-color: #0d1117;
+    color: #c9d1d9;
+    font-family: Arial;
+    margin: 20px;
 }
 
-.profile{
-    border-radius: 13px;
-    background-color: #282828;
-    width: 21%;
-    box-shadow: 
-    0 4px 6px rgba(143, 103, 169, 0.2),
-    0 10px 20px rgba(74, 213, 56, 0.1);
-}
-.data{
-    width: 77%;
-    display: flex;
-    justify-content: space-between;
-}
-.task-work{
-
-    height: 100%;
-    background-color: #282828;
-    border-radius: 13px;
-    box-shadow: 
-    0 4px 6px rgba(143, 103, 169, 0.2),
-    0 10px 20px rgba(74, 213, 56, 0.1);
-}
-.data-graphs-months{
-    justify-content: space-between;
-    width: 68%;
-}
-.task-work{
-    width: 30%;
+h2 {
+    text-align: center;
 }
 
-.graph, .months{
-    height: 50%;
+
+.main-layout {
     display: flex;
-    flex-direction: column;
+    gap: 40px;
+    align-items: flex-start;
 }
-.graphs{
-    display: flex;
-    justify-content: space-between;
+
+/* ===== PROFILE ===== */
+.profile-avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden;      
+    margin: 0 auto 15px auto;
+    border: 2px solid #39d353;
+    box-shadow: 0 0 12px rgba(57, 211, 83, 0.4);
 }
-.line-graph, .bar-graph{
-    height: 295px;
-    width: 49%;
-    background-color: #282828;
-    border-radius: 13px;
-    box-shadow: 
-    0 4px 6px rgba(143, 103, 169, 0.2),
-    0 10px 20px rgba(74, 213, 56, 0.1);
-}
-.months{
-    margin-top: 10px;
-    height: 295px;
+
+.profile-avatar img {
     width: 100%;
-    background-color: #282828;
-    border-radius: 13px;
-    box-shadow: 
-    0 4px 6px rgba(143, 103, 169, 0.2),
-    0 10px 20px rgba(74, 213, 56, 0.1);
+    height: 100%;
+    object-fit: cover;     
+}
+.profile-box {
+    width: 250px;
+    height: 600px;
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 40px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.profile-box h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #39d353;
+}
+
+.profile-info {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/*INPUTS */
+
+input,
+button {
+    padding: 6px;
+    margin: 5px;
+    background: #161b22;
+    border: 1px solid #30363d;
+    color: #c9d1d9;
+    border-radius: 4px;
+}
+
+button:hover {
+    background: #21262d;
+    cursor: pointer;
+}
+
+
+.top-section {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.graphs-wrapper {
+    display: flex;
+    gap: 30px;
+    width: 930px; 
+}
+
+.chart-box {
+    flex: 1;
+    height: 280px;
+    background: #161b22;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #30363d;
+}
+
+/*  TASK LIST */
+
+.task-box {
+    width: 250px;
+    background: #161b22;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #30363d;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    margin: 6px 0;
+}
+
+/* ===== MONTHS SECTION ===== */
+
+.months-wrapper {
+    width: 930px; 
+    margin-top: 25px;
+}
+
+.months-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+}
+
+.month {
+    text-align: center;
+    font-size: 8px;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+td {
+    border: 1px solid #30363d;
+    width: 12px;
+    height: 12px;
+    background-color: #0d1117;
+}
+
+/* HEATMAP COLORS */
+
+.green1 { background-color: #0e4429; }
+.green2 { background-color: #006d32; }
+.green3 { background-color: #26a641; }
+.green4 { background-color: #39d353; }
+
+/* RESET */
+
+.reset-btn {
+    background-color: #b22222;
+    border: 1px solid #ff4d4d;
+}
+
+.reset-btn:hover {
+    background-color: #ff4d4d;
 }

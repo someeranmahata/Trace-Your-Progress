@@ -1,34 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <title>TraceProgress</title>
+    <title>Advanced Task Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="style.css">
+
+
 </head>
+
 <body>
-    
-    <div class="header">
-        <h2>Trace Your Progress</h2>
-    </div>
-    <div class="date-taskadd">
-        <p>date input/ task input / reset</p>
-    </div>
-    <div class="main-container">
-        
-        <div class="profile"></div>
-        <div class="data">
-            <div class="data-graphs-months">
-                <div class="graphs">
-                    <div class="line-graph"></div>
-                    <div class="bar-graph"></div>
+
+    <h2>Yearly Task Dashboard</h2>
+
+    <div class="main-layout">
+
+        <div class="profile-box">
+            <h3>Profile</h3>
+
+            <div style="text-align:center;">
+                <div class="profile-avatar">
+                    <img src="OIP.webp" alt="Profile">
                 </div>
-                <div class="months"></div>
             </div>
-            <div class="task-work"></div>
+
+
+            <div class="profile-info">
+                <p><strong>Name:</strong> Someeran</p>
+                <p><strong>Total Tasks:</strong> <span id="totalTasks">0</span></p>
+                <p><strong>Completed:</strong> <span id="completedTasks">0</span></p>
+                <p><strong>Completion %:</strong> <span id="completionPercent">0%</span></p>
+            </div>
         </div>
-        
+
+        <div class="dashboard-content">
+
+            <div style="text-align:center;">
+                <button onclick="changeDate(-1)">◀</button>
+                <input type="date" id="dateInput">
+                <button onclick="changeDate(1)">▶</button>
+
+                <input type="text" id="taskName" placeholder="Task name">
+                <button onclick="addTask()">Add Task</button>
+                <button onclick="copyYesterdayTasks()">Same as Yesterday</button>
+                <button onclick="resetData()" class="reset-btn">Reset All Data</button>
+            </div>
+
+            <!-- TOP ROW -->
+            <div class="top-section">
+
+                <!-- GRAPHS WRAPPER -->
+                <div class="graphs-wrapper">
+                    <div class="chart-box">
+                        <canvas id="barChart"></canvas>
+                    </div>
+
+                    <div class="chart-box">
+                        <canvas id="lineChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- TASK LIST -->
+                <div class="task-box">
+                    <h4>Tasks (Selected Date)</h4>
+                    <div id="taskList">Select a date to view tasks</div>
+                </div>
+
+            </div>
+
+            <!-- MONTHS BELOW GRAPHS ONLY -->
+            <div class="months-wrapper">
+                <div class="months-container" id="allMonths"></div>
+            </div>
+
+        </div>
+
     </div>
 
 
 </body>
 <script src="script.js"></script>
+
 </html>
