@@ -20,7 +20,7 @@ function updateDashboard() {
 
     updateCharts(data);
     generateMonths();
-    updateProfileStats();   // 👈 add this line
+    updateProfileStats();   
 }
 /* ADD TASK */
 function addTask() {
